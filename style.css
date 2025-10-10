@@ -106,7 +106,7 @@ footer p a {
 }
 
 footer p a:hover {
-  background-color: #a4161a; /* rouge foncé au survol */
+  background-color: #ded6d6; /* rouge foncé au survol */
   color: #d01818;
 }
 
