@@ -1,55 +1,114 @@
+/* === Style global === */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
-  color: #333;
+  color: #222;
 }
 
-/* Barre de navigation en haut */
-.top-nav {
-  background-color: #ffffff;
-  padding: 10px 0;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* === Conteneur principal === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
-.top-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #005a8d;
-  font-weight: bold;
+/* === En-tête : nom + photo à gauche / menu à droite === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
-/* Bloc profil centré */
-.profil-block {
+/* Bloc gauche (nom + photo) */
+.left-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
 }
 
-/* Nom juste au-dessus de la photo */
 .nom {
+  font-size: 2em;
+  font-weight: 700;
+  color: #0b3d91;
   margin-bottom: 10px;
-  font-size: 2.2em;
-  color: #005a8d;
+  text-align: center;
 }
 
-/* Photo centrée */
+/* Photo sous le nom */
 .photo-container {
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .photo {
-  width: 160px;
-  height: auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 3px solid #0b3d91;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Phrase d’accroche juste en dessous */
-.description {
-  margin-top: 5px;
-  font-size: 1.2em;
+/* === Menu de navigation à droite === */
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #0b3d91;
+  transform: scale(1.05);
+}
+
+/* === Description === */
+.intro {
   text-align: center;
+  margin-top: 20px;
+}
+
+.description {
+  font-size: 1.2em;
+  color: #444;
+}
+
+/* === Pied de page === */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #0b3d91;
+  font-weight: 600;
+}
+
+.bottom-nav a:hover {
+  text-decoration: underline;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #222;
+  background-color: #e0e0e0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+footer p a:hover {
+  background-color: #0b3d91;
+  color: #fff;
 }
