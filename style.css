@@ -1,62 +1,23 @@
-/* === Style global === */
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
-}
-
-/* === Conteneur principal === */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 40px auto;
-}
-
-/* === En-tête : nom + photo à gauche / menu à droite === */
-.header {
+/* === Ligne du haut : nom + navigation === */
+.top-line {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* ✅ aligné verticalement au centre */
+  align-items: center;
   margin-bottom: 20px;
 }
 
-/* Bloc gauche (nom + photo) */
-.left-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Nom à gauche */
 .nom {
   font-size: 2em;
   font-weight: 700;
   color: #0b3d91;
-  margin-bottom: 10px;
-  text-align: center;
+  margin: 0;
 }
 
-/* Photo sous le nom */
-.photo-container {
-  display: flex;
-  justify-content: center;
-}
-
-.photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #0b3d91;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* === Menu de navigation à droite === */
+/* Navigation à droite sur la même ligne */
 .top-nav {
   display: flex;
-  align-items: center;
   gap: 25px;
-  margin-top: 0; /* ✅ supprime l'espace vide au-dessus */
 }
 
 .top-nav a {
@@ -71,52 +32,18 @@ body {
   transform: scale(1.05);
 }
 
-/* === Description === */
-.intro {
-  text-align: center;
-  margin-top: 20px;
+/* Photo centrée en dessous */
+.photo-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 }
 
-.description {
-  font-size: 1.2em;
-  color: #444;
-}
-
-/* === Pied de page === */
-footer {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.95em;
-}
-
-.bottom-nav a {
-  text-decoration: none;
-  color: #0b3d91;
-  font-weight: 600;
-}
-
-.bottom-nav a:hover {
-  text-decoration: underline;
-}
-
-footer p a {
-  text-decoration: none;
-  color: #222;
-  background-color: #e0e0e0;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-footer p a:hover {
-  background-color: #0b3d91;
-  color: #fff;
-}
-
-
-/* === Bloc bas aligné à gauche === */
-.left-bottom {
-  text-align: left;
-  margin-top: 40px;
-  padding-left: 20px;
+.photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0b3d91;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
