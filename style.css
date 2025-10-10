@@ -125,9 +125,13 @@ footer p a:hover {
 }
 
 
-.mailto {
-  font-size: 0.95em;
-  color: #0b3d91;
+.email-link {
+  color: #0b3d91; /* bleu élégant */
   font-weight: 500;
-  margin-top: 5px;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: #0846b3; /* bleu plus foncé au survol */
 }
