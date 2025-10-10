@@ -125,3 +125,9 @@ footer p a:hover {
 }
 
 
+.email {
+  font-size: 0.95em;
+  color: #0b3d91;
+  font-weight: 500;
+  margin-top: 5px;
+}
