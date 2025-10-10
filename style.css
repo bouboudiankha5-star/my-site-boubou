@@ -97,7 +97,7 @@ footer {
 
 footer p a {
   text-decoration: none;
-  color: #dd1212;
+  color: #f3eded;
   background-color: #d62828; /* rouge vif */
   padding: 8px 16px;
   border-radius: 8px;
@@ -107,7 +107,7 @@ footer p a {
 
 footer p a:hover {
   background-color: #a4161a; /* rouge foncé au survol */
-  color: #fff;
+  color: #d01818;
 }
 
 /* === Bloc bas aligné à gauche === */
