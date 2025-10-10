@@ -17,7 +17,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center; /* ✅ aligné verticalement au centre */
   margin-bottom: 20px;
 }
 
@@ -56,7 +56,7 @@ body {
   display: flex;
   align-items: center;
   gap: 25px;
-  margin-top: 10px;
+  margin-top: 0; /* ✅ supprime l'espace vide au-dessus */
 }
 
 .top-nav a {
