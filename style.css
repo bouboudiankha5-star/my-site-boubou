@@ -61,16 +61,18 @@ body {
 
 .top-nav a {
   text-decoration: none;
-  color: #333;         /* Couleur bleue élégante */
-  font-weight: 700;       /* Texte bien en gras */
-  font-size: 1.1em;       /* Taille légèrement augmentée */
+  color: #333;
+  font-weight: 700;
+  font-size: 1.1em; 
   transition: all 0.3s ease;
 }
+
 
 .top-nav a:hover {
   color: #0b3d91;
   transform: scale(1.05);
 }
+
 
 
 /* === Description === */
