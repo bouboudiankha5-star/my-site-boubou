@@ -112,3 +112,9 @@ footer p a:hover {
   background-color: #0b3d91;
   color: #fff;
 }
+/* === Bloc bas aligné à gauche === */
+.left-bottom {
+  text-align: left;
+  margin-top: 40px;
+  padding-left: 20px;
+}
