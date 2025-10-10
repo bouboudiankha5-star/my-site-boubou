@@ -1,37 +1,26 @@
-/* === Bloc horizontal === */
+/* === Bloc horizontal principal === */
 .horizontal-block {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 40px;
   margin-top: 40px;
 }
 
-/* === Nom à gauche, centré verticalement */
-.nom-block {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-}
-
-.nom {
-  font-size: 2.2em;
-  letter-spacing: 1px;
-  color: #0b3d91;
-  margin: 0;
-}
-
-/* === Bloc photo + description */
-.photo-description-block {
+/* === Bloc gauche : nom + photo + accroche === */
+.left-block {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* === Photo === */
+.nom {
+  font-size: 2.2em;
+  color: #0b3d91;
+  margin-bottom: 10px;
+}
+
 .photo-container {
   margin-bottom: 10px;
 }
@@ -45,10 +34,33 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* === Description sous la photo, alignée à gauche */
 .description {
   font-size: 1.2em;
   color: #444;
-  margin: 0;
+  margin-top: 5px;
   text-align: left;
+}
+
+/* === Navigation à droite === */
+.top-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #0b3d91;
+  transform: scale(1.05);
 }
