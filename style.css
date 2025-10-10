@@ -97,7 +97,7 @@ footer {
 
 footer p a {
   text-decoration: none;
-  color: #d62828;
+  color: red;
   background-color: #e0e0e0;
   padding: 8px 16px;
   border-radius: 8px;
@@ -107,7 +107,7 @@ footer p a {
 
 footer p a:hover {
   background-color: #0b3d91;
-  color: #d62828;
+  color: #fff;
 }
 /* === Bloc bas aligné à gauche === */
 .left-bottom {
