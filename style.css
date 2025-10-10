@@ -67,12 +67,6 @@ body {
   transition: all 0.3s ease;
 }
 
-
-.top-nav a:hover {
-  color: #0b3d91;
-  transform: scale(1.05);
-}
-
 /* === Description === */
 .intro {
   text-align: center;
