@@ -82,12 +82,13 @@ body {
   color: #444;
 }
 
-/* === Pied de page === */
-footer {
+/* === Bloc bas aligné à gauche === */
+.left-bottom {
+  text-align: left;
   margin-top: 40px;
-  text-align: center;
-  font-size: 0.95em;
+  padding-left: 20px;
 }
+
 
 .bottom-nav a {
   text-decoration: none;
@@ -112,3 +113,5 @@ footer p a:hover {
   background-color: #0b3d91;
   color: #fff;
 }
+
+
