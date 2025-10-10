@@ -97,7 +97,7 @@ footer {
 
 footer p a {
   text-decoration:red;
-  color: #222;
+  color: hwb(0 95% 4%);
   background-color: #e0e0e0;
   padding: 8px 16px;
   border-radius: 8px;
