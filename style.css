@@ -61,9 +61,9 @@ body {
 
 .top-nav a {
   text-decoration: none;
-  color: white;         /* Couleur bleue élégante */
+  color: #333;         /* Couleur bleue élégante */
   font-weight: 700;       /* Texte bien en gras */
-  font-size: 1.3em;       /* Taille légèrement augmentée */
+  font-size: 1.1em;       /* Taille légèrement augmentée */
   transition: all 0.3s ease;
 }
 
