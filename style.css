@@ -97,17 +97,19 @@ footer {
 
 footer p a {
   text-decoration: none;
-  color: #222;
-  background-color: #e0e0e0;
+  color: #fff;
+  background-color: #d62828; /* rouge vif */
   padding: 8px 16px;
   border-radius: 8px;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
 footer p a:hover {
-  background-color: #0b3d91;
+  background-color: #a4161a; /* rouge foncé au survol */
   color: #fff;
 }
+
 /* === Bloc bas aligné à gauche === */
 .left-bottom {
   text-align: left;
