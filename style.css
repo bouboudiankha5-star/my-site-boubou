@@ -1,107 +1,33 @@
-/* === Style global === */
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
+/* === Bloc horizontal === */
+.horizontal-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
 }
 
-/* === Conteneur principal === */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 40px auto;
-  text-align: center;
+/* === Nom à gauche de la photo === */
+.nom-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* === Nom === */
 .nom {
   font-size: 2.2em;
   letter-spacing: 1px;
   color: #0b3d91;
-  margin-bottom: 30px;
+  margin: 0;
 }
 
-/* === Bloc horizontal === */
-.horizontal-block {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  width: 100%;
-}
-
-/* === Photo === */
-.photo-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.photo {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #0b3d91;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* === Navigation principale === */
-.top-nav {
-  flex: 2;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: right;
-}
-
-.top-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 10px 20px;
-  transition: all 0.3s ease;
-}
-
-.top-nav a:hover {
-  color: #0b3d91;
-  transform: scale(1.05);
-}
-
-/* === Description === */
+/* === Description sous la photo === */
 .description {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 1.2em;
   color: #444;
-}
-
-/* === Pied de page === */
-footer {
-  margin-top: 40px;
-  font-size: 0.95em;
-}
-
-.bottom-nav a {
-  text-decoration: none;
-  color: #0b3d91;
-  font-weight: 600;
-}
-
-.bottom-nav a:hover {
-  text-decoration: underline;
-}
-
-footer p a {
-  text-decoration: none;
-  color: #222;
-  background-color: #e0e0e0;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-footer p a:hover {
-  background-color: #0b3d91;
-  color: #fff;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
