@@ -138,15 +138,10 @@ footer p a:hover {
 
 
 .graphique-footer {
-  margin-top: 20px;
-  margin-bottom: 30px; /* espace sous le graphique */
+  margin-top: 40px;
   text-align: center;
 }
 
-
-.graphique-footer {
-  margin-bottom: 30px; /* espace sous le graphique */
-}
 
 
 .graphique-img {
