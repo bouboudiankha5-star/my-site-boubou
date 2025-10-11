@@ -126,11 +126,9 @@ footer p a:hover {
 
 
 .email-link {
-  display: inline-block;
-  margin-bottom: 60px; /* ✅ plus d’espace entre le mail et le graphique */
-  text-decoration: none;
-  color: #0b5ed7;
+  color: #0b3d91; /* bleu élégant */
   font-weight: 500;
+  text-decoration: none;
 }
 
 .email-link:hover {
@@ -138,9 +136,12 @@ footer p a:hover {
   color: #0846b3; /* bleu plus foncé au survol */
 }
 
+
+
+
 .graphique-footer {
-  margin-top: 0; /* on ne touche pas au positionnement vertical global */
-  text-align: center; /* aligné avec le contact */
+  margin-top: 20px;
+  text-align: center;
 }
 
 .graphique-img {
@@ -149,4 +150,3 @@ footer p a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
