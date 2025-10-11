@@ -125,10 +125,15 @@ footer p a:hover {
 }
 
 
+.left-bottom {
+  text-align: center; /* garde l'alignement global */
+}
+
 .email-link {
-  color: #0b3d91; /* bleu élégant */
-  font-weight: 500;
+  display: inline-block;
   text-decoration: none;
+  color: #0b5ed7;
+  font-weight: 500;
 }
 
 .email-link:hover {
@@ -136,12 +141,10 @@ footer p a:hover {
   color: #0846b3; /* bleu plus foncé au survol */
 }
 
-
-
-
+/* ✅ Ajout d'espace entre le footer et le graphique */
 .graphique-footer {
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 60px; /* augmente l’espace vertical */
+  text-align: center; /* reste bien aligné avec le footer */
 }
 
 .graphique-img {
