@@ -136,6 +136,10 @@ footer p a:hover {
   color: #0846b3; /* bleu plus foncé au survol */
 }
 
+.email-link {
+  display: inline-block;
+  margin-bottom: 40px; /* espace entre le lien email et la section graphique */
+}
 
 .graphique-footer {
   margin-top: 20px;
@@ -148,3 +152,9 @@ footer p a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
+
+
