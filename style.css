@@ -135,3 +135,17 @@ footer p a:hover {
   text-decoration: underline;
   color: #0846b3; /* bleu plus foncé au survol */
 }
+
+
+/*
+
+
+.graphique-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  center
+}
