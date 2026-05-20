@@ -1,142 +1,74 @@
-/* === Style global === */
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
-}
+/* --- STYLES DE L'EN-TÊTE STYLISÉ --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #eaeaea; /* Ligne de séparation élégante */
+            margin-bottom: 40px;
+        }
 
-/* === Conteneur principal === */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 40px auto;
-}
+        /* 1. Style pour "Boubou Dianka" (Bordure fine) */
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            
+            /* Bordure fine inspirée du design */
+            border: 1px solid var(--primary);
+            padding: 8px 16px;
+            border-radius: 4px;
+            
+            display: inline-flex; align-items: center; gap: 10px;
+            transition: all var(--transition-speed);
+        }
 
-/* === En-tête : nom + photo à gauche / menu à droite === */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
+        /* Effet au survol du nom */
+        .brand-name:hover {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
 
-/* Bloc gauche (nom + photo) */
-.left-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+        /* 2. Style pour la Navigation (Bordures épaisses/colorées) */
+        nav ul {
+            display: flex;
+            gap: 15px; /* Espace entre les boutons */
+            list-style: none;
+        }
 
-.nom {
-  font-size: 2em;
-  font-weight: 700;
-  color: #0b3d91;
-  margin-bottom: 10px;
-  text-align: center;
-}
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            
+            /* Bordure épaisse et arrondie comme le bouton CV */
+            border-width: 2px;
+            border-style: solid;
+            padding: 10px 20px;
+            border-radius: 30px; /* Bords très arrondis */
+            
+            display: inline-flex; align-items: center; gap: 8px;
+            transition: all var(--transition-speed);
+        }
 
-/* Photo sous le nom */
-.photo-container {
-  display: flex;
-  justify-content: center;
-}
+        /* --- COULEURS DIFFÉRENTES AU SURVOL --- */
+        
+        /* Background : Bleu */
+        .nav-background { border-color: #3498db; color: #3498db; }
+        .nav-background:hover { background-color: #3498db; color: white; }
 
-.photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #0b3d91;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+        /* Skills : Vert */
+        .nav-skills { border-color: #2ecc71; color: #2ecc71; }
+        .nav-skills:hover { background-color: #2ecc71; color: white; }
 
-/* === Menu de navigation à droite === */
-.top-nav {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-top: 10px;
-}
+        /* Projects : Orange */
+        .nav-projects { border-color: #e67e22; color: #e67e22; }
+        .nav-projects:hover { background-color: #e67e22; color: white; }
 
-.top-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 700;
-  font-size: 1.2em; 
-  transition: all 0.3s ease;
-}
-
-
-.top-nav a:hover {
-  color: #0b3d91;
-  transform: scale(1.05);
-}
-
-
-
-/* === Description === */
-.intro {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.description {
-  font-size: 1.2em;
-  color: #444;
-}
-
-/* === Pied de page === */
-footer {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.95em;
-}
-
-.bottom-nav a {
-  text-decoration: none;
-  color: #0b3d91;
-  font-weight: 600;
-}
-
-.bottom-nav a:hover {
-  text-decoration: underline;
-}
-
-footer p a {
-  text-decoration: none;
-  color: red;
-  background-color: #e0e0e0;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-
-footer p a:hover {
-  background-color: #0b3d91;
-  color: #fff;
-}
-/* === Bloc bas aligné à gauche === */
-.left-bottom {
-  text-align: left;
-  margin-top: 40px;
-  padding-left: 20px;
-}
-
-
-.email-link {
-  color: #0b3d91; /* bleu élégant */
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.email-link:hover {
-  text-decoration: underline;
-  color: #0846b3; /* bleu plus foncé au survol */
-}
-
-
-
-
-
+        /* Experience : Violet */
+        .nav-experience { border-color: #9b59b6; color: #9b59b6; }
+        .nav-experience:hover { background-color: #9b59b6; color: white; }
