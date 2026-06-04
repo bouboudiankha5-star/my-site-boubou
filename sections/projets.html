@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Projects — Boubou DIANKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --primary: #0a3663;
+            --text-dark: #1a1a1a;
+            --text-muted: #666666;
+            --accent-red: #d43f3a;
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-user-select: none; user-select: none; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; padding: 40px 20px; }
+        .wrapper { max-width: 900px; margin: 0 auto; }
+        
+        .back-home { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 30px; transition: var(--transition); }
+        .back-home:hover { transform: translateX(-5px); }
+
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; }
+        .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
+
+        .projects-section { display: flex; flex-direction: column; gap: 30px; }
+        .project-card { background: #ffffff; border: 1px solid #eaeaea; border-radius: 16px; padding: 30px; position: relative; overflow: hidden; transition: var(--transition); }
+        .project-card:hover { transform: translateY(-4px); border-color: #cbd5e1; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04); }
+        
+        .project-badge { position: absolute; top: 25px; right: 30px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 12px; border-radius: 12px; background: #f1f5f9; color: var(--text-muted); }
+        .project-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--primary); margin-bottom: 12px; max-width: 75%; }
+        .project-desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; text-align: justify; }
+        
+        .project-tools { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+        .tool-tag { font-size: 0.75rem; font-weight: 500; background: #f8fafc; color: var(--primary); padding: 4px 10px; border-radius: 6px; border: 1px solid #e2e8f0; }
+
+        .request-link { font-size: 0.85rem; color: var(--accent-red); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--accent-red); padding: 6px 14px; border-radius: 20px; transition: all 0.2s ease; }
+        .request-link:hover { background-color: var(--accent-red); color: #ffffff; box-shadow: 0 4px 10px rgba(212, 63, 58, 0.15); }
+
+        /* AI SPECIAL CARD */
+        .ai-card { background: linear-gradient(135deg, #ffffff 0%, #f4f8ff 100%); border-color: #dbeafe; }
+        .ai-card .project-badge { background: #dbeafe; color: #1e40af; }
+        .ai-bubbles { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 1; }
+        .bubble { position: absolute; background: rgba(59, 130, 246, 0.06); border-radius: 50%; bottom: -20px; animation: floatUp 6s infinite ease-in-out; }
+        .bubble:nth-child(1) { width: 40px; height: 40px; left: 20%; animation-delay: 0s; animation-duration: 5s; }
+        .bubble:nth-child(2) { width: 25px; height: 25px; left: 50%; animation-delay: 1.5s; animation-duration: 7s; }
+        .bubble:nth-child(3) { width: 50px; height: 50px; left: 75%; animation-delay: 3s; animation-duration: 6s; }
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(0.8); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-120px) scale(1.2); opacity: 0; }
+        }
+        .ai-card .project-title, .ai-card .project-desc, .ai-card .project-tools, .ai-card .request-link { position: relative; z-index: 2; }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <a href="../index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        
+        <h2 class="page-title">Research Works & Research Assistantships</h2>
+        <p class="page-subtitle">A curated summary of my economic modeling and predictive engineering projects.</p>
+
+        <div class="projects-section">
+            
+            <div class="project-card ai-card">
+                <div class="ai-bubbles">
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                </div>
+                <span class="project-badge">Research Assistant</span>
+                <h4 class="project-title">AI Speculative Bubbles & Multi-Scale Market Dynamics</h4>
+                <p class="project-desc">
+                    Research conducted at TREE UMR CNRS 6031. Studied market dynamics (Microsoft, Tesla, Nasdaq) via EMD and Wavelet methods, isolating 80% of return energy in short-term fluctuations. Detected speculative bubbles using GSADF/BSADF tests (identifying Tesla's explosive phase with a test statistic of 2.965 vs threshold of 1.894). Developed Random Forest predictive models mapping behavioral indices (Google Trends, Wikipedia), achieving an R² of 0.65 for the Nasdaq index.
+                </p>
+                <div class="project-tools">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">EMD / Wavelets</span>
+                    <span class="tool-tag">GSADF / BSADF</span>
+                    <span class="tool-tag">Random Forest</span>
+                    <span class="tool-tag">R² = 0.65</span>
+                </div>
+                <a href="mailto:boubou.diankha5@gmail.com?subject=Request Access: AI Speculative Bubbles Research Paper" class="request-link"><i class="fa-solid fa-envelope"></i> Request Full Paper Access</a>
+            </div>
+
+            <div class="project-card">
+                <span class="project-badge">Master's Thesis (UPPA Funded)</span>
+                <h4 class="project-title">The Tragedy of the Commons: The Role of Beliefs, Attitudes Toward Ambiguity, Social Preferences, and Public Policies</h4>
+                <p class="project-desc">
+                    Academic master's thesis funded by UPPA, analyzing the management frameworks and behavioral challenges of common pool resources focused on Lakes in Senegal. Incorporating microeconomic modeling, game theory architectures, empirical coordination criteria, and public policy tracking.
+                </p>
+                <div class="project-tools">
+                    <span class="tool-tag">Microeconomics</span>
+                    <span class="tool-tag">Game Theory</span>
+                    <span class="tool-tag">Behavioral Economics</span>
+                    <span class="tool-tag">Senegal Lakes</span>
+                </div>
+                <a href="mailto:boubou.diankha5@gmail.com?subject=Request Access: Master Thesis (Tragedy of the Commons)" class="request-link"><i class="fa-solid fa-envelope"></i> Request Thesis Access</a>
+            </div>
+
+            <div class="project-card">
+                <span class="project-badge">Spatial Econometrics</span>
+                <h4 class="project-title">The Territorial Impact of the Energy Performance Certificate (DPE 2021) Reform in France</h4>
+                <p class="project-desc">
+                    Modeling spatial economic dependencies and local market adjustments resulting from the 2021 Diagnostic de Performance Énergétique (DPE) policy shift across France. Implementing spatial weight configurations within SAR and SEM structures to observe localized environmental and housing disparities.
+                </p>
+                <div class="project-tools">
+                    <span class="tool-tag">R Studio</span>
+                    <span class="tool-tag">Spatial Autocorrelation</span>
+                    <span class="tool-tag">SAR / SEM</span>
+                    <span class="tool-tag">DPE 2021</span>
+                </div>
+                <a href="mailto:boubou.diankha5@gmail.com?subject=Request Access: DPE 2021 Spatial Econometrics Project" class="request-link"><i class="fa-solid fa-envelope"></i> Request Project Report</a>
+            </div>
+
+            <div class="project-card">
+                <span class="project-badge">Behavioral Economics</span>
+                <h4 class="project-title">Empirical Analysis of Micro-Level Decision Making</h4>
+                <p class="project-desc">
+                    Investigating cognitive biases and bounded rationality in economic agents. Using microdata to evaluate how psychological framing and non-monetary incentives influence equilibrium choices.
+                </p>
+                <div class="project-tools">
+                    <span class="tool-tag">STATA</span>
+                    <span class="tool-tag">Microdata</span>
+                    <span class="tool-tag">Discrete Choice Models</span>
+                </div>
+                <a href="mailto:boubou.diankha5@gmail.com?subject=Request Access: Behavioral Decision-Making Study" class="request-link"><i class="fa-solid fa-envelope"></i> Request Empirical Data & Report</a>
+            </div>
+
+            <div class="project-card">
+                <span class="project-badge">Geographical Economics</span>
+                <h4 class="project-title">Teleworking and Spatial Equilibrium: Dispersion or Agglomeration?</h4>
+                <p class="project-desc">
+                    An evaluation of how remote work systems affect spatial equilibrium vectors, exploring core structural transformations between industrial agglomeration patterns and regional residential dispersion across geographic spaces.
+                </p>
+                <div class="project-tools">
+                    <span class="tool-tag">EViews</span>
+                    <span class="tool-tag">New Economic Geography</span>
+                    <span class="tool-tag">Spatial Equilibrium</span>
+                </div>
+                <a href="mailto:boubou.diankha5@gmail.com?subject=Request Access: Teleworking and Spatial Equilibrium Study" class="request-link"><i class="fa-solid fa-envelope"></i> Request Case Study Access</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if ((e.ctrlKey && [67, 85].includes(e.keyCode)) || e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) e.preventDefault();
+        });
+    </script>
+</body>
+</html>

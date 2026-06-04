@@ -7,25 +7,28 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- VARIABLES CRÉATIVES --- */
+        /* --- BASE VARIABLES --- */
         :root {
-            --bg-color: #fcfcfc;       /* Blanc cassé type papier de recherche */
-            --primary: #0a3663;        /* Bleu nuit académique profond */
-            --text-dark: #1a1a1a;      /* Noir doux pour la lisibilité */
-            --text-muted: #666666;     /* Gris pour les détails secondaires */
-            --accent-red: #d43f3a;     /* Rouge corail sophistiqué (pour le CV) */
-            --glass-bg: rgba(255, 255, 255, 0.7);
-            --transition: cubic-bezier(0.25, 1, 0.5, 1) 0.4s;
+            --bg-color: #fcfcfc;
+            --primary: #0a3663;
+            --text-dark: #1a1a1a;
+            --text-muted: #666666;
+            --accent-red: #d43f3a;
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        /* --- STYLES DE BASE & SQUELETTE --- */
+        /* PROTECTION: Prevents text selection across the website */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         body {
@@ -33,80 +36,72 @@
             background-color: var(--bg-color);
             color: var(--text-dark);
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        /* Cadre extérieur élégant (Effet Galerie/Magazine) */
-        .page-border {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border: 12px solid #ffffff;
-            z-index: 999;
-            pointer-events: none;
+            padding: 0 20px;
         }
 
         .wrapper {
             max-width: 1200px;
             margin: 60px auto;
-            padding: 0 40px;
         }
 
-        /* --- HEADER & NAV ASYMÉTRIQUE --- */
+        /* --- HEADER & NAVIGATION --- */
         header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: center;
             margin-bottom: 80px;
+            padding-bottom: 25px;
             border-bottom: 1px solid #eaeaea;
-            padding-bottom: 20px;
         }
 
         .brand-name {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
-            letter-spacing: -0.5px;
+            border: 2px solid var(--primary);
+            padding: 10px 24px;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+
+        .brand-name:hover {
+            background-color: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(10, 54, 99, 0.2);
         }
 
         nav ul {
             display: flex;
-            gap: 40px;
+            gap: 15px;
             list-style: none;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            padding-bottom: 5px;
+            padding: 12px 24px;
+            border-radius: 30px;
+            border-width: 2px;
+            border-style: solid;
             transition: var(--transition);
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0;
-            width: 0; height: 1px;
-            background-color: var(--primary);
-            transition: var(--transition);
-        }
+        .nav-background { border-color: #2f80ed; color: #2f80ed; }
+        .nav-background:hover { background-color: #2f80ed; color: #ffffff; box-shadow: 0 6px 15px rgba(47, 128, 237, 0.3); }
 
-        nav a:hover {
-            color: var(--primary);
-        }
+        .nav-skills { border-color: #27ae60; color: #27ae60; }
+        .nav-skills:hover { background-color: #27ae60; color: #ffffff; box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3); }
 
-        nav a:hover::after {
-            width: 100%;
-        }
+        .nav-projects { border-color: #e67e22; color: #e67e22; }
+        .nav-projects:hover { background-color: #e67e22; color: #ffffff; box-shadow: 0 6px 15px rgba(230, 126, 34, 0.3); }
 
-        /* --- LAYOUT CRÉATIF (GRILLE ASYMÉTRIQUE) --- */
+        .nav-experience { border-color: #8e44ad; color: #8e44ad; }
+        .nav-experience:hover { background-color: #8e44ad; color: #ffffff; box-shadow: 0 6px 15px rgba(142, 68, 173, 0.3); }
+
+        /* --- GLOBAL LAYOUT --- */
         .main-layout {
             display: grid;
             grid-template-columns: 280px 1fr;
@@ -114,20 +109,23 @@
             align-items: start;
         }
 
-        /* --- PHOTO DE PROFIL CRÉATIVE --- */
         .avatar-wrapper {
             position: relative;
             display: inline-block;
         }
 
-        /* L'effet de cercle stylisé en arrière-plan */
         .avatar-wrapper::before {
             content: '';
             position: absolute;
             top: -10px; left: -10px; right: -10px; bottom: -10px;
-            border: 1px dashed var(--primary);
+            border: 2px dashed var(--primary);
             border-radius: 50%;
-            animation: rotateClockwise 20s linear infinite;
+            animation: rotateClockwise 20s linear infinite; 
+        }
+
+        @keyframes rotateClockwise {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .avatar {
@@ -137,76 +135,68 @@
             object-fit: cover;
             display: block;
             border: 4px solid #ffffff;
-            box-shadow: 0 10px 30px rgba(10, 54, 99, 0.12);
-            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(10, 54, 99, 0.1);
         }
 
-        .avatar-wrapper:hover .avatar {
-            transform: scale(1.03);
-            box-shadow: 0 15px 35px rgba(10, 54, 99, 0.18);
-        }
-
-        /* --- CONTENT AREA & TYPOGRAPHIE --- */
         .content-area {
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 60px;
         }
 
         .biography {
-            font-size: 1.2rem;
-            font-weight: 300;
+            font-size: 1.25rem;
             color: #333333;
             text-align: justify;
-            letter-spacing: -0.1px;
-        }
-
-        /* Accentuation créative sur les premiers mots */
-        .biography::first-line {
-            font-weight: 500;
-            color: var(--primary);
-        }
-
-        /* --- INTERACTIVE STATS / TAGS (Ajout créatif discret) --- */
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: -10px;
-        }
-
-        .tag {
-            background-color: #ffffff;
-            border: 1px solid #e5e8eb;
-            color: var(--primary);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.3px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            transition: var(--transition);
-        }
-
-        .tag:hover {
-            border-color: var(--primary);
-            background-color: var(--primary);
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-
-        /* --- CONTACT SECTIONS & BOUTONS --- */
-        .contact-box {
-            border-top: 1px solid #eaeaea;
-            padding-top: 40px;
+            line-height: 1.8;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            font-style: italic;
-            color: var(--text-muted);
-            margin-bottom: 20px;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+        }
+
+        /* --- RESEARCH CORE TAGS --- */
+        .core-tags-container {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+        }
+
+        .tags-grid {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .core-tag {
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: #f8fafc;
+            color: var(--primary);
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+
+        .core-tag:hover {
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* --- CONTACT --- */
+        .contact-box {
+            border-top: 1px solid #eaeaea;
+            padding-top: 40px;
         }
 
         .action-buttons {
@@ -220,10 +210,9 @@
             font-size: 0.9rem;
             font-weight: 500;
             text-decoration: none;
-            border-radius: 30px; /* Bords arrondis modernes */
+            border-radius: 30px;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
             transition: var(--transition);
         }
 
@@ -236,72 +225,41 @@
         .btn-email:hover {
             background-color: var(--primary);
             color: #ffffff;
-            box-shadow: 0 5px 15px rgba(10, 54, 99, 0.15);
         }
 
         .btn-cv {
             background-color: var(--accent-red);
             color: #ffffff;
+            border: 2px solid var(--accent-red);
             box-shadow: 0 4px 10px rgba(212, 63, 58, 0.2);
         }
 
         .btn-cv:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(212, 63, 58, 0.35);
+            box-shadow: 0 8px 20px rgba(212, 63, 58, 0.4);
         }
 
-        /* --- ANIMATIONS --- */
-        @keyframes rotateClockwise {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* --- RESPONSIVE --- */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 900px) {
-            .main-layout {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
-
-            header {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-                margin-bottom: 40px;
-            }
-
-            .avatar-wrapper {
-                margin: 0 auto;
-            }
-
-            .biography {
-                text-align: center;
-                font-size: 1.1rem;
-            }
-
-            .tech-tags, .action-buttons {
-                justify-content: center;
-            }
+            .main-layout { grid-template-columns: 1fr; text-align: center; }
+            header { flex-direction: column; gap: 25px; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
+            .avatar-wrapper { margin: 0 auto; }
+            .biography { text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <div class="page-border"></div>
-
     <div class="wrapper">
         
         <header>
-            <a href="#" class="brand-name">
-                <i class="fas fa-id-badge"></i> Boubou Dianka
-            </a>
+            <a href="#" class="brand-name">Boubou Dianka</a>
             <nav>
                 <ul>
-                    <li><a href="#background" class="nav-background"><i class="fas fa-history"></i> Background</a></li>
-                    <li><a href="#skills" class="nav-skills"><i class="fas fa-chart-line"></i> Skills</a></li>
-                    <li><a href="#projects" class="nav-projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                    <li><a href="#experience" class="nav-experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="sections/parcours.html" class="nav-background">Background</a></li>
+                    <li><a href="sections/competences.html" class="nav-skills">Skills</a></li>
+                    <li><a href="sections/projets.html" class="nav-projects">Projects</a></li>
+                    <li><a href="sections/experiences.html" class="nav-experience">Experience</a></li>
                 </ul>
             </nav>
         </header>
@@ -316,20 +274,29 @@
 
             <div class="content-area">
                 
-                <p class="biography">
-                    Student in Master 2 Applied Economics, EIED Research course at the University of Pau and Pays de l'Adour, I am developing solid expertise in data analysis vs science. Mastering tools such as Python, Stata, R, EViews, as well as advanced methods such as neural networks, Difference-in-Differences and machine learning models (Random Forest, etc.), I am actively preparing for a thesis in my area of specialization.
-                </p>
+                <div>
+                    <h3 class="section-title">Welcome to my Research Portfolio</h3>
+                    <p class="biography">
+                        I am currently a Master 2 student in Applied Economics (EIED Research Track) at the University of Pau and Pays de l'Adour. Specialized in advanced econometrics and quantitative modeling, my academic focus centers on mapping spatial architectures, deciphering behavioral strategies, and modeling financial indicators. I am actively preparing for a Ph.D. candidacy to scale structural models across empirical fields.
+                    </p>
+                </div>
 
-                <div class="tech-tags">
-                    <div class="tag"># Econometrics</div>
-                    <div class="tag"># Data Science</div>
-                    <div class="tag"># Python & R</div>
-                    <div class="tag"># Diff-in-Diff</div>
-                    <div class="tag"># Machine Learning</div>
+                <div class="core-tags-container">
+                    <h4 style="color:var(--primary); font-size:1.1rem; margin-bottom:5px;"><i class="fa-solid fa-graduation-cap"></i> Core Research & Methods</h4>
+                    <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:15px;">Click on the menu items above to explore the detailed technical data and projects within each area.</p>
+                    <div class="tags-grid">
+                        <span class="core-tag">Spatial Econometrics</span>
+                        <span class="core-tag">Urban Analytics & GIS (Cartography)</span>
+                        <span class="core-tag">Behavioral Game Theory</span>
+                        <span class="core-tag">Machine Learning Predictive Modeling</span>
+                        <span class="core-tag">Large Datasets Processing (+50k observations)</span>
+                        <span class="core-tag">Time Series Multi-Scale Analysis (EMD / Wavelets)</span>
+                        <span class="core-tag">Causal Inference (DiD / Matching)</span>
+                    </div>
                 </div>
 
                 <div class="contact-box">
-                    <h3 class="section-title">Get in touch</h3>
+                    <h3 class="section-title" style="border:none; padding-left:0;">Get in touch</h3>
                     <div class="action-buttons">
                         <a href="mailto:boubou.diankha5@gmail.com" class="btn btn-email">
                             boubou.diankha5@gmail.com
@@ -345,6 +312,19 @@
         </div>
 
     </div>
+
+    <script>
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.keyCode == 67) { e.preventDefault(); }
+            if (e.ctrlKey && e.keyCode == 85) { e.preventDefault(); }
+            if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) { e.preventDefault(); }
+            if (e.keyCode == 44) {
+                e.preventDefault();
+                alert("Screenshots are restricted on this research portfolio.");
+            }
+        });
+    </script>
 
 </body>
 </html>

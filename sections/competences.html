@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Expertise — Boubou DIANKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --primary: #0a3663;
+            --text-dark: #1a1a1a;
+            --text-muted: #666666;
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-user-select: none; user-select: none; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; padding: 40px 20px; }
+        .wrapper { max-width: 900px; margin: 0 auto; }
+        
+        .back-home { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 30px; transition: var(--transition); }
+        .back-home:hover { transform: translateX(-5px); }
+
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; }
+        .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .skills-card { background: #ffffff; border: 1px solid #eaeaea; border-radius: 12px; padding: 30px; transition: var(--transition); }
+        .skills-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.03); border-color: #cbd5e1; }
+        
+        .skills-card h4 { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .skills-list { font-size: 0.92rem; color: var(--text-muted); line-height: 1.8; }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <a href="../index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        
+        <h2 class="page-title">Technical & Econometric Skills</h2>
+        <p class="page-subtitle">A deep breakdown of computational frameworks and structural toolsets I use in quantitative economics.</p>
+
+        <div class="skills-grid">
+            <div class="skills-card">
+                <h4><i class="fa-solid fa-code"></i> Languages & Software</h4>
+                <p class="skills-list">R-Studio, Python, STATA, LaTeX, Mathematica, Matlab, EViews, Power BI, Advanced Excel.</p>
+            </div>
+            <div class="skills-card">
+                <h4><i class="fa-solid fa-chart-simple"></i> Analytics & Data</h4>
+                <p class="skills-list">SQL Databases, SPHINX IQ3 Data Analytics, Applied Computational Econometrics, Advanced Mathematical Statistics.</p>
+            </div>
+            <div class="skills-card">
+                <h4><i class="fa-solid fa-microchip"></i> Data Science & Signal</h4>
+                <p class="skills-list">Machine Learning Pipelines, Artificial Neural Networks (ANN), Structural Signal Theory, Wavelet Transformations & Empirical Mode Decomposition (EMD).</p>
+            </div>
+            <div class="skills-card">
+                <h4><i class="fa-solid fa-diagram-project"></i> Advanced Policy Methods</h4>
+                <p class="skills-list">Spatial Econometrics (SAR / SEM models), Difference-in-Differences (DiD Frameworks), Propensity Score Matching, Behavioral Experimental Systems.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if ((e.ctrlKey && [67, 85].includes(e.keyCode)) || e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) e.preventDefault();
+        });
+    </script>
+</body>
+</html>

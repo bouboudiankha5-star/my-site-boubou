@@ -1,42 +1,114 @@
-<main class="container">
-  <h2>Academic Background</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Background — Boubou DIANKA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <section class="etapes">
-    <h3>🎓 Master 2 Applied Economics – EIED Research Track</h3>
-    <p>University of Pau and Pays de l’Adour (UPPA)<br>
-    Focus: Econometrics, Data Science, and Policy Evaluation</p>
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --primary: #0a3663;
+            --text-dark: #1a1a1a;
+            --text-muted: #666666;
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-user-select: none; user-select: none; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; padding: 40px 20px; }
+        .wrapper { max-width: 900px; margin: 0 auto; }
+        
+        .back-home { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 30px; transition: var(--transition); }
+        .back-home:hover { transform: translateX(-5px); }
 
-<div style="margin-top: 40px;"></div>
-<h3 class="graphique-img">University of Pau and Pays de l’Adour (UPPA)</h3>
-<img src="../assets/img/unnamed.jpg" alt="University of Pau and Pays de l’Adour (UPPA)" class="graphique-img">
+        .page-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; }
+        .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
 
+        .edu-list { display: flex; flex-direction: column; gap: 30px; }
+        .edu-card { background: #ffffff; border: 1px solid #eaeaea; border-radius: 12px; padding: 28px; transition: var(--transition); }
+        .edu-card:hover { border-color: #cbd5e1; box-shadow: 0 8px 20px rgba(0,0,0,0.02); }
+        
+        .edu-year { color: var(--primary); font-weight: 700; font-size: 0.95rem; margin-bottom: 5px; }
+        .edu-degree { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--text-dark); margin-bottom: 4px; }
+        .edu-inst { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; }
 
+        /* --- CONTENEUR LOGO NETTOYÉ ET HOMOGÈNE --- */
+        .univ-image-container {
+            width: 100%;
+            max-width: 200px; /* Limite la largeur maximale */
+            height: 60px;     /* Bloque une hauteur fixe égale pour tous */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
 
+        .univ-logo {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Redimensionne proprement sans déformer */
+            filter: grayscale(10%) contrast(100%);
+            transition: var(--transition);
+        }
 
+        .edu-card:hover .univ-logo {
+            filter: grayscale(0%) contrast(105%);
+            transform: scale(1.04);
+        }
 
+        @media (max-width: 600px) {
+            .univ-image-container { max-width: 100%; height: 60px; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
 
-  </section>
+    <div class="wrapper">
+        <a href="../index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        
+        <h2 class="page-title">Educational Background</h2>
+        <p class="page-subtitle">My academic history and milestones in advanced economic research tracks.</p>
 
-  <section class="etapes">
-    <h3>📚 Key Courses & Methods</h3>
-    <ul>
-      <li>Advanced Econometrics (DID, IV, Panel Models)</li>
-      <li>Machine Learning: Random Forest, Neural Networks</li>
-      <li>Quantitative Tools: Python, R, Stata, EViews</li>
-      <li>Policy Impact Evaluation & Forecasting</li>
-    </ul>
-  </section>
+        <div class="edu-list">
+            
+            <div class="edu-card">
+                <div class="edu-year">2025 - 2026</div>
+                <div class="edu-degree">Master 2 in Applied Economics — EIED Research Track</div>
+                <div class="edu-inst">University of Pau and Pays de l'Adour (UPPA), France</div>
+                <div class="univ-image-container">
+                    <img src="../assets/img/logo-uppa.png" alt="UPPA Logo" class="univ-logo">
+                </div>
+            </div>
 
-  <section class="etapes">
-    <h3>🧠 Research Orientation</h3>
-    <p>Preparing for doctoral studies focused on investment dynamics, statistical modeling, and development economics. My current work explores the role of residual normality in validating econometric models applied to real-world data.</p>
-  </section>
+            <div class="edu-card">
+                <div class="edu-year">2023 - 2024</div>
+                <div class="edu-degree">Master MEEF in Economic & Social Sciences</div>
+                <div class="edu-inst">Aix-Marseille University, France</div>
+                <div class="univ-image-container">
+                    <img src="../assets/img/logo-amu.png" alt="Aix-Marseille Université Logo" class="univ-logo">
+                </div>
+            </div>
 
-  <section class="etapes">
-    <h3>🌍 International Exposure</h3>
-    <p>Academic and professional ties with Senegal and Canada, enriching my perspective on global economic challenges and data-driven policy design.</p>
-  </section>
-</main>
+            <div class="edu-card">
+                <div class="edu-year">2021 - 2022</div>
+                <div class="edu-degree">Master 2 in Quantitative & Financial Economics</div>
+                <div class="edu-inst">Cheikh Anta Diop University (UCAD), Dakar</div>
+                <div class="univ-image-container">
+                    <img src="../assets/img/logo-ucad.png" alt="UCAD Logo" class="univ-logo">
+                </div>
+            </div>
 
+        </div>
+    </div>
 
-
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if ((e.ctrlKey && [67, 85].includes(e.keyCode)) || e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) e.preventDefault();
+        });
+    </script>
+</body>
+</html>
